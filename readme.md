@@ -20,5 +20,5 @@ npm run dev
 ### Development Route
 http://127.0.0.1:5173/
 
--Ramazan Kapar (Head of Web Development)
--ramazan@makromusic.com
+Ramazan Kapar (Head of Web Development)
+ramazan@makromusic.com
