@@ -1,4 +1,4 @@
-# world-map-maker
+# makromusic Web Task
 
 ## Project setup
 ```
