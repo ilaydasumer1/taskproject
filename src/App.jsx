@@ -1,16 +1,25 @@
 import { useState } from "react";
 import Button from "./components/Button";
+import Alert from "./components/Alert";
 
 const App = () => {
-  const [isLove, setIsLove] = useState(false);
+  const [state, setstate] = useState(false)
+  const openAlert = () => {
+    setstate(true)
+    setTimeout(function () {
+      if (!state) {
+        setstate(false)
+      }
+    }, 4000);
+  }
+
+
 
   return (
     <div className="bg-secondary min-h-screen">
       <div className="container mx-auto py-12">
-        <h1 className={"text-3xl font-bold mb-6 " + (isLove && "text-primary")}>
-          {isLove && "I love "} makromusic!
-        </h1>
-        <Button onClick={() => setIsLove(!isLove)}>Give Some Love</Button>
+        <Button onClick={() => { openAlert() }}>Give Some Love</Button>
+        <Alert className='' open={state} title='title' description='decription' type='success' />
       </div>
     </div>
   );
