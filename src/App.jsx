@@ -4,6 +4,7 @@ import Alert from "./components/Alert";
 
 const App = () => {
   const [state, setstate] = useState(false)
+
   const openAlert = () => {
     setstate(true)
     setTimeout(function () {
@@ -19,7 +20,7 @@ const App = () => {
     <div className="bg-secondary min-h-screen">
       <div className="container mx-auto py-12">
         <Button onClick={() => { openAlert() }}>Give Some Love</Button>
-        <Alert className='' open={state} title='title' description='decription' type='success' />
+        <Alert className='' open={state} setOpen={setstate} title='title' description='decription' type='success' />
       </div>
     </div>
   );
